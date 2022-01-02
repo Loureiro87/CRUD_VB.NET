@@ -34,48 +34,51 @@ Partial Class frEmpleados
         Me.btnNombre = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.openFoto = New System.Windows.Forms.OpenFileDialog()
         CType(Me.txtId, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(43, 108)
+        Me.txtNombre.Location = New System.Drawing.Point(43, 110)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(175, 23)
+        Me.txtNombre.Size = New System.Drawing.Size(200, 23)
         Me.txtNombre.TabIndex = 0
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(43, 169)
+        Me.txtApellido.Location = New System.Drawing.Point(43, 171)
         Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(175, 23)
+        Me.txtApellido.Size = New System.Drawing.Size(200, 23)
         Me.txtApellido.TabIndex = 1
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(43, 53)
+        Me.txtId.Location = New System.Drawing.Point(43, 55)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(120, 23)
         Me.txtId.TabIndex = 2
         '
         'picFoto
         '
-        Me.picFoto.Location = New System.Drawing.Point(43, 230)
+        Me.picFoto.BackColor = System.Drawing.Color.DarkGray
+        Me.picFoto.Location = New System.Drawing.Point(43, 231)
         Me.picFoto.Name = "picFoto"
         Me.picFoto.Size = New System.Drawing.Size(175, 125)
+        Me.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picFoto.TabIndex = 3
         Me.picFoto.TabStop = False
         '
         'linkFoto
         '
         Me.linkFoto.AutoSize = True
-        Me.linkFoto.Location = New System.Drawing.Point(43, 360)
+        Me.linkFoto.Location = New System.Drawing.Point(43, 369)
         Me.linkFoto.Name = "linkFoto"
-        Me.linkFoto.Size = New System.Drawing.Size(63, 15)
+        Me.linkFoto.Size = New System.Drawing.Size(67, 15)
         Me.linkFoto.TabIndex = 4
         Me.linkFoto.TabStop = True
-        Me.linkFoto.Text = "LinkLabel1"
+        Me.linkFoto.Text = "Seleccionar"
         '
         'Label1
         '
@@ -178,4 +181,5 @@ Partial Class frEmpleados
     Friend WithEvents btnNombre As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnGuardar As Button
+    Friend WithEvents openFoto As OpenFileDialog
 End Class
