@@ -1,4 +1,8 @@
-﻿Public Class frEmpleados
+﻿Imports capaEntidad
+Imports capaNegocio
+
+Public Class frEmpleados
+    Dim NegocioEmpleado As New CNEmpleado()
     Private Sub frEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -33,6 +37,24 @@
 
 
         openFoto.FileName = ""
+
+    End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Dim empleado As New CEEmpleados()
+
+        Dim Validacion As Boolean
+
+        empleado.Id = txtId.Value
+        empleado.Nombre = txtNombre.Text
+        empleado.Apellido = txtApellido.Text
+        empleado.Foto = picFoto.ImageLocation
+
+        Validacion = NegocioEmpleado.validarDatos(empleado)
+
+        If Validacion = False Then Exit Sub
+
+        MessageBox.Show("Guardar")
 
     End Sub
 End Class
